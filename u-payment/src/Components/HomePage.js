@@ -7,15 +7,24 @@ import { useState } from "react";
 export const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
+  // const [description, setDescription] = useState([]);
 
+  // const getDescription = () => {
+  //   axios
+  //     .get("https://62286b649fd6174ca82321f1.mockapi.io/case-study/products/1")
+  //     .then((response) => {
+  //       console.log(response);
+  //       setDescription(response.data);
+  //     });
+  //   }
   const getCategory = () => {
     axios
-    .get("https://62286b649fd6174ca82321f1.mockapi.io/case-study/categories/")
-    .then((response)=>{
-      console.log(response);
-      setCategory(response.data);
-    })
-  }
+      .get("https://62286b649fd6174ca82321f1.mockapi.io/case-study/categories/")
+      .then((response) => {
+        console.log(response);
+        setCategory(response.data);
+      });
+  };
 
   const getProduct = () => {
     axios
@@ -35,29 +44,31 @@ export const HomePage = () => {
           className="input"
           placeholder="Apple Watch,Samsung S21,Mac book Pro,..."
         />
-        <button className="data" onClick={getProduct}>Load Product</button>
+        <button className="data" onClick={getProduct}>
+          Load Product
+        </button>
         <button
           className="category dropdown-toggle"
           type="button"
           placeholder="Categories"
-        onClick={getCategory}
+          onClick={getCategory}
         >
           Categories
         </button>
-        </div>
-        {category.map((props) => {
-          return(
-            <>
+      </div>
+      {category.map((props) => {
+        return (
+          <div key={props.id}>
             <select className="home-category">
-            <option>{props.name}</option>
-          </select>
-            </>
-          )
-        }) }
+              <option key={props.id}>{props.name}</option>
+            </select>
+          </div>
+        );
+      })}
 
       {products.map((value) => {
         return (
-          <>
+          <div key={value.id}>
             <div className="float-container">
               <div className="float-child">
                 <div className="div-image">
@@ -67,12 +78,10 @@ export const HomePage = () => {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         );
       })}
-      <span className="add">
-        +
-      </span>
+      <span className="add">+</span>
     </>
   );
 };
