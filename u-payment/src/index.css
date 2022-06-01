@@ -1,13 +1,181 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+.head {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: white;
+  border-radius: 5px;
+  height: 35px;
+  font-size: 20px;
+}
+.left-align {
+  float: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin-left: 20px;
+  background-color: white;
+}
+.right-align {
+  float: right;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin-right: 20px;
+  background-color: white;
+}
+.input {
+  background-color: white;
+  margin-top: 30px;
+  margin-left: 30px;
+  border-radius: 5px;
+  width: 300px;
+  border: none;
+}
+.div-image {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 100px;
+  margin-top: 30px;
+  float: left;
+  cursor: pointer;
+}
+.image {
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+  margin-top: 30px;
+  float: left;
+}
+
+.item-name {
+  margin-top: 160px;
+}
+.item-price {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.data {
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  margin-left: 330px;
+  width: 110px;
+}
+.category {
+  background-color: white;
+  margin-top: 30px;
+  margin-right: 30px;
+  border-radius: 5px;
+  width: 300px;
+  border: none;
+  float: right;
+}
+
+.add {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.desc-image-div {
+  background-color: white;
+  margin-left: 150px;
+  height: 200px;
+  width: 200px;
+  margin-top: 50px;
+  border-radius: 10px;
+  float: left;
+}
+
+.desc-image{
+  margin-left: 25px;
+  height: 150px;
+  width: 150px;
+  margin-top: 30px;
+}
+
+.desc-name {
+  margin-left: 280px;
+  margin-top: -185px;
+  width: 250px;
+}
+
+.desc-price {
+  margin-left: 280px;
+  width: 30px;
+  margin-top: 125px;
+}
+.hr {
+  margin-top: 300px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.desc-head {
+  margin-left: 150px;
+}
+
+.desc-about {
+  margin-left: 150px;
+  text-align: left;
+}
+
+.create-h3{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+  /* margin-right: 200px; */
+  margin-left: 400px;
+  width: 700px;
+}
+
+.form-button {
+  width: 700px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  height: 30px;
+}
+
+.home-category{
+  background-color: white;
+  float: right;
+  text-align: center;
+  width: 150px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
