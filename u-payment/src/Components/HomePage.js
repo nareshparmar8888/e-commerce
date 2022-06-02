@@ -1,8 +1,9 @@
-import { React } from "react";
+import { React , useEffect} from "react";
 import Header from "./Header";
 import axios from "axios";
 import { useState } from "react";
-
+import { CreateProduct } from '../Components/CreateProduct';
+import { Link } from 'react-router-dom';
 
 export const HomePage = () => {
   const [products, setProducts] = useState([]);
@@ -34,7 +35,10 @@ export const HomePage = () => {
         setProducts(response.data);
       });
   };
-
+  useEffect(() => {
+    getProduct();
+  }, [])
+  
   return (
     <>
       <Header />
@@ -44,9 +48,6 @@ export const HomePage = () => {
           className="input"
           placeholder="Apple Watch,Samsung S21,Mac book Pro,..."
         />
-        <button className="data" onClick={getProduct}>
-          Load Product
-        </button>
         <button
           className="category dropdown-toggle"
           type="button"
@@ -71,17 +72,21 @@ export const HomePage = () => {
           <div key={value.id}>
             <div className="float-container">
               <div className="float-child">
+                <Link to='/description' className="link">
                 <div className="div-image">
                   <img src={value.avatar} alt="watch" className="image" />
                   <div className="item-name">{value.name}</div>
                   <div className="item-price">{value.price}</div>
                 </div>
+                </Link>
               </div>
             </div>
           </div>
         );
       })}
-      <span className="add">+</span>
+      <Link to='/create'>
+      <span className="add" onClick={CreateProduct}>+</span>
+      </Link>
     </>
   );
 };
