@@ -148,7 +148,7 @@ code {
   text-align: left;
 }
 
-.create-h3{
+.h3{
   margin-top: 10px;
   text-align: center;
 }
@@ -178,4 +178,8 @@ code {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+.link {
+  color: black;
 }
